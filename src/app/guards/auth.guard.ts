@@ -28,8 +28,8 @@ export class AuthGuard implements CanActivate {
     // }
     // return true;
     //route.params['idProduct'];
-    route.paramMap.get('idProduct');
-    route.paramMap.has('idProduct');
+    // route.paramMap.get('idProduct');
+    // route.paramMap.has('idProduct');
 
     return this.authService.getUser()
     .pipe(

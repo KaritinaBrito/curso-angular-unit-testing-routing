@@ -13,7 +13,7 @@ import { generateManyProducts } from "./models/product.mock";
 import { generateOneUser } from "./models/user.mock";
 
 
-fdescribe('App Integration Tests', () => {
+describe('App Integration Tests', () => {
   let fixture: ComponentFixture<AppComponent>;
   let component: AppComponent;
   let router : Router;

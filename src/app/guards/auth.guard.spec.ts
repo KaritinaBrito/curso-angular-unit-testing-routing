@@ -6,7 +6,7 @@ import { Router } from "@angular/router";
 import { fakeActivatedRouteSnapshot, fakeParamMap, fakeRouterStateSnapshot, mockObservable } from "src/testing";
 import { generateOneUser } from "../models/user.mock";
 
-fdescribe('Test for AuthGuard', () => {
+describe('Test for AuthGuard', () => {
   let guard: AuthGuard;
   let tokenService: jasmine.SpyObj<TokenService>;
   let authService: jasmine.SpyObj<AuthService>;
@@ -37,9 +37,6 @@ fdescribe('Test for AuthGuard', () => {
 
   it('should return true with session', (doneFn) => {
     const activatedRoute = fakeActivatedRouteSnapshot({
-      paramMap: fakeParamMap({
-        idProduct: '1212'
-      })
     });
     const routerState = fakeRouterStateSnapshot({});
 
@@ -55,9 +52,6 @@ fdescribe('Test for AuthGuard', () => {
 
   it('should return false without session', (doneFn) => {
     const activatedRoute = fakeActivatedRouteSnapshot({
-      paramMap: fakeParamMap({
-        idProduct: '1212'
-      })
     });
     const routerState = fakeRouterStateSnapshot({});
 
@@ -77,9 +71,6 @@ fdescribe('Test for AuthGuard', () => {
       // params: {
       //   idProduct: '1212'
       // },
-      paramMap: fakeParamMap({
-        idProduct: '1212'
-      })
     });
     const routerState = fakeRouterStateSnapshot({});
 
